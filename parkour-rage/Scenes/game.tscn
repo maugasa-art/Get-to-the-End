@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://l6eljncr6c3w"]
+
+[ext_resource type="Texture2D" uid="uid://buconey0ndmhf" path="res://Assets/New Piskel-1.png (1).png" id="1_ebmjs"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2poj3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qxrlw"]
+atlas = ExtResource("1_ebmjs")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wrm1d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qxrlw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3dryh"]
+radius = 6.0
+height = 22.0
+
+[node name="Game" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+
+[node name="Boundaries" type="Node2D" parent="."]
+
+[node name="BottomBoundary" type="StaticBody2D" parent="Boundaries"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/BottomBoundary"]
+position = Vector2(173, 220)
+shape = SubResource("WorldBoundaryShape2D_2poj3")
+
+[node name="LeftBoundary" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(-219, 279)
+rotation = -1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/LeftBoundary"]
+position = Vector2(173, 220)
+shape = SubResource("WorldBoundaryShape2D_2poj3")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+position = Vector2(20, 21)
+sprite_frames = SubResource("SpriteFrames_wrm1d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(19, 18)
+shape = SubResource("CapsuleShape2D_3dryh")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
