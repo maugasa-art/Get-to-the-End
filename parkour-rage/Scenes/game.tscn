@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://l6eljncr6c3w"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2poj3"]
+
+[node name="Game" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+
+[node name="Boundaries" type="Node2D" parent="."]
+
+[node name="BottomBoundary" type="StaticBody2D" parent="Boundaries"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/BottomBoundary"]
+position = Vector2(173, 220)
+shape = SubResource("WorldBoundaryShape2D_2poj3")
+
+[node name="LeftBoundary" type="StaticBody2D" parent="Boundaries"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/LeftBoundary"]
+position = Vector2(173, 220)
+shape = SubResource("WorldBoundaryShape2D_2poj3")
