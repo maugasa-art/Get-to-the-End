@@ -1,5 +1,45 @@
-[gd_scene format=3 uid="uid://k713c11rms6m"]
+[gd_scene format=4 uid="uid://k713c11rms6m"]
+
+[ext_resource type="Texture2D" uid="uid://ncjn63wxmapf" path="res://Assets/New Piskel-1.png.png" id="1_w51g1"]
+[ext_resource type="PackedScene" uid="uid://bql1d04gpain0" path="res://player.tscn" id="2_4jv7b"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_82oti"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_03iqk"]
+texture = ExtResource("1_w51g1")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_82oti"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_03iqk")
 
 [node name="Game" type="Node2D" unique_id=942967988]
 
 [node name="Boundaries" type="Node2D" parent="." unique_id=813505416]
+
+[node name="Side_Boundary" type="StaticBody2D" parent="Boundaries" unique_id=1456925996]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Side_Boundary" unique_id=679275587]
+position = Vector2(-1, 8)
+rotation = 1.5678825
+shape = SubResource("WorldBoundaryShape2D_82oti")
+
+[node name="Bottom_Boundary" type="StaticBody2D" parent="Boundaries" unique_id=965782354]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Bottom_Boundary" unique_id=499161564]
+position = Vector2(108, 137)
+shape = SubResource("WorldBoundaryShape2D_82oti")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=138170014]
+tile_map_data = PackedByteArray("AAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAAGAAIAAAAAAAAAAAAHAAIAAAAAAAAAAAAMAAIAAAAAAAAAAAANAAIAAAAAAAAAAAAOAAIAAAAAAAAAAAAQAAIAAAAAAAAAAAAPAAIAAAAAAAAAAAARAAIAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_82oti")
+
+[node name="Player" parent="." unique_id=122637200 instance=ExtResource("2_4jv7b")]
+position = Vector2(26, 14)
