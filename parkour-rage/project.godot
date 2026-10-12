@@ -15,12 +15,8 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="parkour_rage"
-<<<<<<< HEAD
-config/features=PackedStringArray("4.4", "GL Compatibility")
-=======
 run/main_scene="uid://k713c11rms6m"
 config/features=PackedStringArray("4.7", "GL Compatibility")
->>>>>>> d92690ab4894f5470498d2bfad34ca6bd0564485
 config/icon="res://icon.svg"
 
 [display]
