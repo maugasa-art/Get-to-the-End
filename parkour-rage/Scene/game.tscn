@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://k713c11rms6m"]
+[gd_scene load_steps=8 format=4 uid="uid://k713c11rms6m"]
 
 [ext_resource type="Texture2D" uid="uid://o00xt0flov7j" path="res://Assets/New Piskel-1.png.png" id="1_w51g1"]
 [ext_resource type="PackedScene" uid="uid://bql1d04gpain0" path="res://player.tscn" id="2_4jv7b"]
 [ext_resource type="PackedScene" uid="uid://d0kgp4ifqjaeu" path="res://killzone.tscn" id="3_4jv7b"]
+[ext_resource type="PackedScene" uid="uid://ca2ei8iwfxp81" path="res://spike.tscn" id="4_03iqk"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_82oti"]
 distance = -279.008
@@ -38,12 +39,16 @@ tile_map_data = PackedByteArray("AAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAA
 tile_set = SubResource("TileSet_82oti")
 
 [node name="Player" parent="." instance=ExtResource("2_4jv7b")]
-position = Vector2(26, 14)
+position = Vector2(25, 3)
 
 [node name="Killzone" parent="." instance=ExtResource("3_4jv7b")]
+position = Vector2(25, 20)
 collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(108, 137)
 shape = SubResource("WorldBoundaryShape2D_82oti")
+
+[node name="Spike" parent="." instance=ExtResource("4_03iqk")]
+position = Vector2(24, 25)
