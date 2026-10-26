@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://bql1d04gpain0"]
+[gd_scene load_steps=6 format=3 uid="uid://bql1d04gpain0"]
 
-[ext_resource type="Texture2D" uid="uid://b28cleycbmhi" path="res://Assets/New Piskel.png" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://buconey0ndmhf" path="res://Assets/New Piskel-1.png (1).png" id="1_4flbx"]
 
 [sub_resource type="GDScript" id="GDScript_82oti"]
 script/source = "extends CharacterBody2D
@@ -69,8 +69,8 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2hs0m")
 }],
-"loop": 0,
-"name": &"idle",
+"loop": true,
+"name": &"default",
 "speed": 5.0
 }, {
 "frames": [{
@@ -97,19 +97,18 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_82oti"]
 height = 32.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1448515543]
-script = SubResource("GDScript_82oti")
+[node name="Player" type="CharacterBody2D"]
+z_index = 5
+script = SubResource("GDScript_i3pqv")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=261319863]
-position = Vector2(16, -17)
-sprite_frames = SubResource("SpriteFrames_82oti")
-animation = &"idle"
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -2)
+sprite_frames = SubResource("SpriteFrames_4cfhn")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1479742607]
-position = Vector2(18, -18)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
 shape = SubResource("CapsuleShape2D_82oti")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1003789593]
-z_index = 5
-zoom = Vector2(4, 4)
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
 position_smoothing_enabled = true
