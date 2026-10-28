@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ca2ei8iwfxp81"]
 
-[ext_resource type="Texture2D" uid="uid://deq6r7kx1r61l" path="res://Assets/spike.png" id="1_7k7bx"]
+[ext_resource type="Texture2D" uid="uid://mqf2xvhwj3p4" path="res://Assets/spike.png" id="1_7k7bx"]
 [ext_resource type="PackedScene" uid="uid://d0kgp4ifqjaeu" path="res://killzone.tscn" id="2_tggh8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7k7bx"]
