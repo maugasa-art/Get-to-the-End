@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dhx0dn3v33xai"]
+
+[ext_resource type="Script" uid="uid://uop6qqnmf1c6" path="res://killzone.gd" id="1_ilbqb"]
+
+[node name="Enemy_killzone" type="Area2D" unique_id=1389981299]
+collision_mask = 2
+script = ExtResource("1_ilbqb")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
