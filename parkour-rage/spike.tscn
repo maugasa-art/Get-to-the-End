@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://ca2ei8iwfxp81"]
+[gd_scene load_steps=6 format=3 uid="uid://ca2ei8iwfxp81"]
 
-[ext_resource type="Texture2D" uid="uid://dh85ffs4i7g52" path="res://Assets/spike.png" id="1_7k7bx"]
-[ext_resource type="Script" uid="uid://uop6qqnmf1c6" path="res://killzone.gd" id="2_7k7bx"]
+[ext_resource type="Texture2D" uid="uid://mqf2xvhwj3p4" path="res://Assets/spike.png" id="1_7k7bx"]
+[ext_resource type="PackedScene" uid="uid://d0kgp4ifqjaeu" path="res://killzone.tscn" id="2_7k7bx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8ryga"]
 atlas = ExtResource("1_7k7bx")
@@ -13,27 +13,23 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8ryga")
 }],
-"loop": 1,
+"loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_82oti"]
-radius = 5.0
-height = 14.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7k7bx"]
+size = Vector2(15, 15)
 
-[node name="Spike" type="Node2D" unique_id=382313660]
+[node name="Spike" type="Node2D"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1425275287]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, 0)
 sprite_frames = SubResource("SpriteFrames_82oti")
 
-[node name="Enemy_killzone" type="Area2D" parent="." unique_id=556868073]
-collision_mask = 2
-script = ExtResource("2_7k7bx")
+[node name="Killzone" parent="AnimatedSprite2D" instance=ExtResource("2_7k7bx")]
+script = null
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy_killzone" unique_id=1119770222]
-position = Vector2(3, 2)
-shape = SubResource("CapsuleShape2D_82oti")
-
-[connection signal="body_entered" from="Enemy_killzone" to="Enemy_killzone" method="_on_body_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Killzone"]
+position = Vector2(1.5, -0.5)
+shape = SubResource("RectangleShape2D_7k7bx")
