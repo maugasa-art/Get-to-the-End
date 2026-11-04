@@ -118,4 +118,4 @@ shape = SubResource("CapsuleShape2D_82oti")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 z_index = 5
-zoom = Vector2(5, 5)
+zoom = Vector2(4, 4)
