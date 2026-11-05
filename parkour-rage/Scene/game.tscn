@@ -24,6 +24,106 @@ texture = ExtResource("1_w51g1")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_03iqk")
 
+[sub_resource type="Animation" id="Animation_h8jt7"]
+length = 0.001
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-257, 65)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Platform2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-265, 6)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Platform3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-252, -89)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Platform4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-189, -42)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Platform5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-61, -124)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Platform6:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-80, -213)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Platform7:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.001),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(113, -314)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Platform:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(148, -320)]
+}
+
 [sub_resource type="Animation" id="Animation_thj8p"]
 resource_name = "move"
 loop_mode = 2
@@ -99,80 +199,17 @@ tracks/5/keys = {
 "update": 0,
 "values": [Vector2(-80, -213), Vector2(-152, -319)]
 }
-
-[sub_resource type="Animation" id="Animation_h8jt7"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Platform:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-257, 65)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Platform2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-265, 6)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../Platform3:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-252, -89)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Platform4:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-189, -42)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../Platform5:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-61, -124)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("../Platform6:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-80, -213)]
+"values": [Vector2(148, -320), Vector2(-84, -320)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sagxc"]
@@ -194,7 +231,8 @@ shape = SubResource("WorldBoundaryShape2D_82oti")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 position = Vector2(0, -1)
-tile_map_data = PackedByteArray("AAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAAGAAIAAAAAAAAAAAAHAAIAAAAAAAAAAAAMAAIAAAAAAAAAAAANAAIAAAAAAAAAAAAOAAIAAAAAAAAAAAAQAAIAAAAAAAAAAAAPAAIAAAAAAAAAAAARAAIAAAAAAAAAAAAKAPz/AAABAAEAAAALAPz/AAABAAEAAAAMAPz/AAABAAEAAAANAPz/AAABAAEAAAAOAPz/AAABAAEAAAAOAP3/AAABAAEAAAAOAP7/AAABAAEAAAAOAP//AAABAAEAAAAPAP//AAABAAEAAAAQAP//AAABAAEAAAARAP//AAABAAEAAAAUAP//AAABAAEAAAAKAPD/AAAAAAEAAAALAPD/AAAAAAEAAAAMAPD/AAAAAAEAAAANAPD/AAAAAAEAAAAOAPD/AAAAAAEAAAAPAPD/AAAAAAEAAAAQAPD/AAAAAAEAAAARAPD/AAAAAAEAAAASAPD/AAAAAAEAAAATAPz/AAAAAAEAAAAUAPz/AAAAAAEAAAAVAPz/AAABAAEAAAAWAPz/AAABAAEAAAAXAPz/AAABAAEAAAAXAP3/AAABAAEAAAAXAP7/AAABAAEAAAAXAP//AAABAAEAAAATAPv/AAABAAEAAAATAPr/AAABAAEAAAATAPn/AAABAAEAAAATAPj/AAABAAEAAAATAPf/AAABAAEAAAATAPb/AAABAAEAAAATAPX/AAABAAEAAAATAPT/AAABAAEAAAATAPP/AAABAAEAAAATAPL/AAABAAEAAAATAPH/AAABAAEAAAATAPD/AAABAAEAAAAJAPz/AAABAAEAAAAJAPv/AAABAAEAAAAJAPr/AAABAAEAAAAJAPn/AAABAAEAAAAJAPj/AAABAAEAAAAJAPf/AAABAAEAAAAJAPb/AAABAAEAAAAJAPX/AAABAAEAAAAJAPT/AAABAAEAAAAJAPP/AAABAAEAAAAJAPL/AAABAAEAAAAJAPH/AAABAAEAAAAJAPD/AAABAAEAAAASAPj/AAABAAAAAAAQAPj/AAABAAAAAAAOAPj/AAABAAAAAAAMAPj/AAABAAAAAAAKAPj/AAABAAAAAADz/wUAAAAAAAEAAAAAAAIAAAAAAAAAAAD0/xkAAAAAAAAAAAAAAOj/AAABAAEAAAD8/+j/AAABAAEAAAD7/+j/AAABAAEAAAD6/+j/AAABAAEAAAD5/+j/AAABAAEAAAD4/+j/AAABAAEAAAD3/+j/AAABAAEAAAD2/+j/AAABAAEAAAD1/+j/AAABAAEAAAABAOj/AAABAAEAAAACAOj/AAABAAEAAAADAOj/AAABAAEAAAAEAOj/AAABAAEAAAAFAOj/AAABAAEAAAAGAOj/AAABAAEAAAAHAOj/AAABAAEAAADw/wgAAAAAAAAAAAA=")
+scale = Vector2(1.02204, 1.04776)
+tile_map_data = PackedByteArray("AAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAAGAAIAAAAAAAAAAAAHAAIAAAAAAAAAAAAMAAIAAAAAAAAAAAANAAIAAAAAAAAAAAAOAAIAAAAAAAAAAAAQAAIAAAAAAAAAAAAPAAIAAAAAAAAAAAARAAIAAAAAAAAAAAAKAPz/AAABAAEAAAALAPz/AAABAAEAAAAMAPz/AAABAAEAAAANAPz/AAABAAEAAAAOAPz/AAABAAEAAAAOAP3/AAABAAEAAAAOAP7/AAABAAEAAAAOAP//AAABAAEAAAAPAP//AAABAAEAAAAQAP//AAABAAEAAAARAP//AAABAAEAAAAUAP//AAABAAEAAAAKAPD/AAAAAAEAAAALAPD/AAAAAAEAAAAMAPD/AAAAAAEAAAANAPD/AAAAAAEAAAAOAPD/AAAAAAEAAAAPAPD/AAAAAAEAAAAQAPD/AAAAAAEAAAARAPD/AAAAAAEAAAASAPD/AAAAAAEAAAATAPz/AAAAAAEAAAAUAPz/AAAAAAEAAAAVAPz/AAABAAEAAAAWAPz/AAABAAEAAAAXAPz/AAABAAEAAAAXAP3/AAABAAEAAAAXAP7/AAABAAEAAAAXAP//AAABAAEAAAATAPv/AAABAAEAAAATAPr/AAABAAEAAAATAPn/AAABAAEAAAATAPj/AAABAAEAAAATAPf/AAABAAEAAAATAPb/AAABAAEAAAATAPX/AAABAAEAAAATAPT/AAABAAEAAAATAPP/AAABAAEAAAATAPL/AAABAAEAAAATAPH/AAABAAEAAAATAPD/AAABAAEAAAAJAPz/AAABAAEAAAAJAPv/AAABAAEAAAAJAPr/AAABAAEAAAAJAPn/AAABAAEAAAAJAPj/AAABAAEAAAAJAPf/AAABAAEAAAAJAPb/AAABAAEAAAAJAPX/AAABAAEAAAAJAPT/AAABAAEAAAAJAPP/AAABAAEAAAAJAPL/AAABAAEAAAAJAPH/AAABAAEAAAAJAPD/AAABAAEAAAASAPj/AAABAAAAAAAQAPj/AAABAAAAAAAOAPj/AAABAAAAAAAMAPj/AAABAAAAAAAKAPj/AAABAAAAAADz/wUAAAAAAAEAAAAAAAIAAAAAAAAAAAD0/xkAAAAAAAAAAAAAAOj/AAABAAEAAAD8/+j/AAABAAEAAAD7/+j/AAABAAEAAAD6/+j/AAABAAEAAAD5/+j/AAABAAEAAAD4/+j/AAABAAEAAAD3/+j/AAABAAEAAAD2/+j/AAABAAEAAAD1/+j/AAABAAEAAAABAOj/AAABAAEAAAACAOj/AAABAAEAAAADAOj/AAABAAEAAAAEAOj/AAABAAEAAAAFAOj/AAABAAEAAAAGAOj/AAABAAEAAAAHAOj/AAABAAEAAADw/wgAAAAAAAAAAADq/wUAAAAAAAEAAADi/wUAAAAAAAEAAAAIAPP/AAABAAEAAAA=")
 tile_set = SubResource("TileSet_82oti")
 
 [node name="Killzone" parent="." instance=ExtResource("3_4jv7b")]
@@ -213,15 +251,74 @@ position = Vector2(10, -16)
 position = Vector2(5, 24)
 
 [node name="Spike2" parent="." instance=ExtResource("4_03iqk")]
-position = Vector2(-158, -362)
+position = Vector2(-155, -380)
 rotation = -3.13639
 
 [node name="Spike3" parent="." instance=ExtResource("4_03iqk")]
-position = Vector2(-143, -362)
+position = Vector2(-140, -380)
 rotation = 3.12209
+scale = Vector2(1, 1)
+
+[node name="Spike4" parent="." instance=ExtResource("4_03iqk")]
+position = Vector2(-125, -381)
+rotation = 3.12209
+scale = Vector2(1, 1)
+
+[node name="Spike5" parent="." instance=ExtResource("4_03iqk")]
+position = Vector2(-110, -380)
+rotation = 3.12209
+scale = Vector2(1, 1)
+
+[node name="Spike6" parent="." instance=ExtResource("4_03iqk")]
+position = Vector2(-95, -380)
+rotation = 3.12209
+scale = Vector2(1, 1)
+
+[node name="Spike7" parent="." instance=ExtResource("4_03iqk")]
+position = Vector2(-79, -380)
+rotation = 3.12209
+scale = Vector2(1, 1)
+
+[node name="Spike8" parent="." instance=ExtResource("4_03iqk")]
+position = Vector2(-65, -379)
+rotation = 3.12209
+scale = Vector2(1, 1)
+
+[node name="Spike9" parent="." instance=ExtResource("4_03iqk")]
+position = Vector2(26, -380)
+rotation = 3.12209
+scale = Vector2(1, 1)
+
+[node name="Spike10" parent="." instance=ExtResource("4_03iqk")]
+position = Vector2(41, -380)
+rotation = 3.12209
+scale = Vector2(1, 1)
+
+[node name="Spike11" parent="." instance=ExtResource("4_03iqk")]
+position = Vector2(57, -380)
+rotation = 3.12209
+scale = Vector2(1, 1)
+
+[node name="Spike12" parent="." instance=ExtResource("4_03iqk")]
+position = Vector2(73, -381)
+rotation = 3.12209
+scale = Vector2(1, 1)
+
+[node name="Spike13" parent="." instance=ExtResource("4_03iqk")]
+position = Vector2(89, -380)
+rotation = 3.12209
+scale = Vector2(1, 1)
+
+[node name="Spike14" parent="." instance=ExtResource("4_03iqk")]
+position = Vector2(105, -380)
+rotation = 3.12209
+scale = Vector2(1, 1)
+
+[node name="Spike15" parent="." instance=ExtResource("4_03iqk")]
+position = Vector2(-81, -411)
 
 [node name="Platform" parent="." instance=ExtResource("5_ihreq")]
-position = Vector2(-257, 65)
+position = Vector2(148, -320)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platform"]
 libraries = {
@@ -270,6 +367,15 @@ autoplay = "move"
 position = Vector2(-80, -213)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platform6"]
+libraries = {
+&"": SubResource("AnimationLibrary_sagxc")
+}
+autoplay = "RESET"
+
+[node name="Platform7" parent="." instance=ExtResource("5_ihreq")]
+position = Vector2(113, -314)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform7"]
 libraries = {
 &"": SubResource("AnimationLibrary_sagxc")
 }
