@@ -1,6 +1,6 @@
-[gd_scene format=4 uid="uid://k713c11rms6m"]
+[gd_scene load_steps=9 format=4 uid="uid://k713c11rms6m"]
 
-[ext_resource type="Texture2D" uid="uid://ncjn63wxmapf" path="res://Assets/New Piskel-1.png.png" id="1_w51g1"]
+[ext_resource type="Texture2D" uid="uid://o00xt0flov7j" path="res://Assets/New Piskel-1.png.png" id="1_w51g1"]
 [ext_resource type="PackedScene" uid="uid://d0kgp4ifqjaeu" path="res://killzone.tscn" id="3_4jv7b"]
 [ext_resource type="PackedScene" uid="uid://ca2ei8iwfxp81" path="res://spike.tscn" id="4_03iqk"]
 [ext_resource type="PackedScene" uid="uid://dqk0djdrhporv" path="res://player.tscn" id="4_ihreq"]
@@ -24,333 +24,132 @@ texture = ExtResource("1_w51g1")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_03iqk")
 
-[sub_resource type="Animation" id="Animation_h8jt7"]
-length = 0.001
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-257, 65)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Platform2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-265, 6)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../Platform3:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-252, -89)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Platform4:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-189, -42)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../Platform5:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-61, -124)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("../Platform6:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-80, -213)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("../Platform7:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0.001),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(113, -314)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("../Platform:position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(148, -320)]
-}
+[node name="Game" type="Node2D"]
 
-[sub_resource type="Animation" id="Animation_thj8p"]
-resource_name = "move"
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-257, 65), Vector2(-328, 65)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Platform2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-265, 6), Vector2(-220, 6)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../Platform3:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-252, -89), Vector2(-164, -89)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Platform4:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-189, -42), Vector2(-228, -42)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../Platform5:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-206, -152), Vector2(-7, -152)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("../Platform6:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-80, -213), Vector2(-152, -319)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("../Platform:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(148, -320), Vector2(-84, -320)]
-}
+[node name="Boundaries" type="Node2D" parent="."]
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_sagxc"]
-_data = {
-&"RESET": SubResource("Animation_h8jt7"),
-&"move": SubResource("Animation_thj8p")
-}
+[node name="Side_Boundary" type="StaticBody2D" parent="Boundaries"]
 
-[node name="Game" type="Node2D" unique_id=2047260094]
-
-[node name="Boundaries" type="Node2D" parent="." unique_id=1886722089]
-
-[node name="Side_Boundary" type="StaticBody2D" parent="Boundaries" unique_id=771297404]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Side_Boundary" unique_id=1870806478]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Side_Boundary"]
 position = Vector2(-1, 8)
 rotation = 1.56788
 shape = SubResource("WorldBoundaryShape2D_82oti")
 
-[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=2029862005]
+[node name="TileMapLayer2" type="TileMapLayer" parent="."]
 position = Vector2(0, -1)
 scale = Vector2(1.02204, 1.04776)
 tile_map_data = PackedByteArray("AAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAAGAAIAAAAAAAAAAAAHAAIAAAAAAAAAAAAMAAIAAAAAAAAAAAANAAIAAAAAAAAAAAAOAAIAAAAAAAAAAAAQAAIAAAAAAAAAAAAPAAIAAAAAAAAAAAARAAIAAAAAAAAAAAAKAPz/AAABAAEAAAALAPz/AAABAAEAAAAMAPz/AAABAAEAAAANAPz/AAABAAEAAAAOAPz/AAABAAEAAAAOAP3/AAABAAEAAAAOAP7/AAABAAEAAAAOAP//AAABAAEAAAAPAP//AAABAAEAAAAQAP//AAABAAEAAAARAP//AAABAAEAAAAUAP//AAABAAEAAAAKAPD/AAAAAAEAAAALAPD/AAAAAAEAAAAMAPD/AAAAAAEAAAANAPD/AAAAAAEAAAAOAPD/AAAAAAEAAAAPAPD/AAAAAAEAAAAQAPD/AAAAAAEAAAARAPD/AAAAAAEAAAASAPD/AAAAAAEAAAATAPz/AAAAAAEAAAAUAPz/AAAAAAEAAAAVAPz/AAABAAEAAAAWAPz/AAABAAEAAAAXAPz/AAABAAEAAAAXAP3/AAABAAEAAAAXAP7/AAABAAEAAAAXAP//AAABAAEAAAATAPv/AAABAAEAAAATAPr/AAABAAEAAAATAPn/AAABAAEAAAATAPj/AAABAAEAAAATAPf/AAABAAEAAAATAPb/AAABAAEAAAATAPX/AAABAAEAAAATAPT/AAABAAEAAAATAPP/AAABAAEAAAATAPL/AAABAAEAAAATAPH/AAABAAEAAAATAPD/AAABAAEAAAAJAPz/AAABAAEAAAAJAPv/AAABAAEAAAAJAPr/AAABAAEAAAAJAPn/AAABAAEAAAAJAPj/AAABAAEAAAAJAPf/AAABAAEAAAAJAPb/AAABAAEAAAAJAPX/AAABAAEAAAAJAPT/AAABAAEAAAAJAPP/AAABAAEAAAAJAPL/AAABAAEAAAAJAPH/AAABAAEAAAAJAPD/AAABAAEAAAASAPj/AAABAAAAAAAQAPj/AAABAAAAAAAOAPj/AAABAAAAAAAMAPj/AAABAAAAAAAKAPj/AAABAAAAAADz/wUAAAAAAAEAAAAAAAIAAAAAAAAAAAD0/xkAAAAAAAAAAAAAAOj/AAABAAEAAAD8/+j/AAABAAEAAAD7/+j/AAABAAEAAAD6/+j/AAABAAEAAAD5/+j/AAABAAEAAAD4/+j/AAABAAEAAAD3/+j/AAABAAEAAAD2/+j/AAABAAEAAAD1/+j/AAABAAEAAAABAOj/AAABAAEAAAACAOj/AAABAAEAAAADAOj/AAABAAEAAAAEAOj/AAABAAEAAAAFAOj/AAABAAEAAAAGAOj/AAABAAEAAAAHAOj/AAABAAEAAADw/wgAAAAAAAAAAADq/wUAAAAAAAEAAADi/wUAAAAAAAEAAAAIAPP/AAABAAEAAAA=")
 tile_set = SubResource("TileSet_82oti")
 
-[node name="Killzone" parent="." unique_id=1528503783 instance=ExtResource("3_4jv7b")]
+[node name="Killzone" parent="." instance=ExtResource("3_4jv7b")]
 position = Vector2(25, 20)
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=772756866]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(108, 137)
 shape = SubResource("WorldBoundaryShape2D_82oti")
 
-[node name="Player" parent="." unique_id=1095980797 instance=ExtResource("4_ihreq")]
+[node name="Player" parent="." instance=ExtResource("4_ihreq")]
 position = Vector2(10, -16)
 
-[node name="Spike" parent="." unique_id=650051451 instance=ExtResource("4_03iqk")]
+[node name="Spike" parent="." instance=ExtResource("4_03iqk")]
 position = Vector2(5, 24)
 
-[node name="Spike2" parent="." unique_id=62311137 instance=ExtResource("4_03iqk")]
+[node name="Spike2" parent="." instance=ExtResource("4_03iqk")]
 position = Vector2(-155, -380)
 rotation = -3.13639
 
-[node name="Spike3" parent="." unique_id=492149036 instance=ExtResource("4_03iqk")]
+[node name="Spike3" parent="." instance=ExtResource("4_03iqk")]
 position = Vector2(-140, -380)
 rotation = 3.12209
 
-[node name="Spike4" parent="." unique_id=713163075 instance=ExtResource("4_03iqk")]
+[node name="Spike4" parent="." instance=ExtResource("4_03iqk")]
 position = Vector2(-125, -381)
 rotation = 3.12209
 
-[node name="Spike5" parent="." unique_id=1851439073 instance=ExtResource("4_03iqk")]
+[node name="Spike5" parent="." instance=ExtResource("4_03iqk")]
 position = Vector2(-110, -380)
 rotation = 3.12209
 
-[node name="Spike6" parent="." unique_id=2069993135 instance=ExtResource("4_03iqk")]
+[node name="Spike6" parent="." instance=ExtResource("4_03iqk")]
 position = Vector2(-95, -380)
 rotation = 3.12209
 
-[node name="Spike7" parent="." unique_id=1488599891 instance=ExtResource("4_03iqk")]
+[node name="Spike7" parent="." instance=ExtResource("4_03iqk")]
 position = Vector2(-79, -380)
 rotation = 3.12209
 
-[node name="Spike8" parent="." unique_id=303750039 instance=ExtResource("4_03iqk")]
+[node name="Spike8" parent="." instance=ExtResource("4_03iqk")]
 position = Vector2(-65, -379)
 rotation = 3.12209
 
-[node name="Spike9" parent="." unique_id=685082639 instance=ExtResource("4_03iqk")]
+[node name="Spike9" parent="." instance=ExtResource("4_03iqk")]
 position = Vector2(26, -380)
 rotation = 3.12209
 
-[node name="Spike10" parent="." unique_id=1701410803 instance=ExtResource("4_03iqk")]
+[node name="Spike10" parent="." instance=ExtResource("4_03iqk")]
 position = Vector2(41, -380)
 rotation = 3.12209
 
-[node name="Spike11" parent="." unique_id=1847382693 instance=ExtResource("4_03iqk")]
+[node name="Spike11" parent="." instance=ExtResource("4_03iqk")]
 position = Vector2(57, -380)
 rotation = 3.12209
 
-[node name="Spike12" parent="." unique_id=1061126632 instance=ExtResource("4_03iqk")]
+[node name="Spike12" parent="." instance=ExtResource("4_03iqk")]
 position = Vector2(73, -381)
 rotation = 3.12209
 
-[node name="Spike13" parent="." unique_id=778076330 instance=ExtResource("4_03iqk")]
+[node name="Spike13" parent="." instance=ExtResource("4_03iqk")]
 position = Vector2(89, -380)
 rotation = 3.12209
 
-[node name="Spike14" parent="." unique_id=292731820 instance=ExtResource("4_03iqk")]
+[node name="Spike14" parent="." instance=ExtResource("4_03iqk")]
 position = Vector2(105, -380)
 rotation = 3.12209
 
-[node name="Spike15" parent="." unique_id=799794460 instance=ExtResource("4_03iqk")]
+[node name="Spike15" parent="." instance=ExtResource("4_03iqk")]
 position = Vector2(-81, -411)
 
-[node name="Platform" parent="." unique_id=1295220343 instance=ExtResource("5_ihreq")]
+[node name="Platform" parent="." instance=ExtResource("5_ihreq")]
 position = Vector2(148, -320)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform" unique_id=828170263]
-libraries/ = SubResource("AnimationLibrary_sagxc")
-autoplay = &"move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform"]
+autoplay = "move"
 
-[node name="Platform2" parent="." unique_id=1522150761 instance=ExtResource("5_ihreq")]
+[node name="Platform2" parent="." instance=ExtResource("5_ihreq")]
 position = Vector2(-265, 6)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform2" unique_id=2038884921]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform2"]
 root_node = NodePath("../../Platform2")
-libraries/ = SubResource("AnimationLibrary_sagxc")
-autoplay = &"move"
+autoplay = "move"
 
-[node name="Platform3" parent="." unique_id=1321529455 instance=ExtResource("5_ihreq")]
+[node name="Platform3" parent="." instance=ExtResource("5_ihreq")]
 position = Vector2(-252, -89)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform3" unique_id=1882349075]
-libraries/ = SubResource("AnimationLibrary_sagxc")
-autoplay = &"move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform3"]
+autoplay = "move"
 
-[node name="Platform4" parent="." unique_id=1929695102 instance=ExtResource("5_ihreq")]
+[node name="Platform4" parent="." instance=ExtResource("5_ihreq")]
 position = Vector2(-189, -42)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform4" unique_id=1656390270]
-libraries/ = SubResource("AnimationLibrary_sagxc")
-autoplay = &"move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform4"]
+autoplay = "move"
 
-[node name="Platform5" parent="." unique_id=1045141288 instance=ExtResource("5_ihreq")]
+[node name="Platform5" parent="." instance=ExtResource("5_ihreq")]
 position = Vector2(-61, -124)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform5" unique_id=1652489696]
-libraries/ = SubResource("AnimationLibrary_sagxc")
-autoplay = &"move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform5"]
+autoplay = "move"
 
-[node name="Platform6" parent="." unique_id=1210627484 instance=ExtResource("5_ihreq")]
+[node name="Platform6" parent="." instance=ExtResource("5_ihreq")]
 position = Vector2(-80, -213)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform6" unique_id=1573788033]
-libraries/ = SubResource("AnimationLibrary_sagxc")
-autoplay = &"RESET"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform6"]
+autoplay = "RESET"
 
-[node name="Platform7" parent="." unique_id=1469191499 instance=ExtResource("5_ihreq")]
+[node name="Platform7" parent="." instance=ExtResource("5_ihreq")]
 position = Vector2(113, -314)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform7" unique_id=885833207]
-libraries/ = SubResource("AnimationLibrary_sagxc")
-autoplay = &"move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform7"]
+autoplay = "move"
