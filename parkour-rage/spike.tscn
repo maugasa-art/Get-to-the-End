@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://ca2ei8iwfxp81"]
+[gd_scene format=3 uid="uid://ca2ei8iwfxp81"]
 
-[ext_resource type="Texture2D" uid="uid://mqf2xvhwj3p4" path="res://Assets/spike.png" id="1_7k7bx"]
+[ext_resource type="Texture2D" uid="uid://dh85ffs4i7g52" path="res://Assets/spike.png" id="1_7k7bx"]
 [ext_resource type="PackedScene" uid="uid://dhx0dn3v33xai" path="res://enemy_killzone.tscn" id="2_7k7bx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8ryga"]
@@ -13,7 +13,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8ryga")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -21,14 +21,14 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7k7bx"]
 size = Vector2(15, 16)
 
-[node name="Spike" type="Node2D"]
+[node name="Spike" type="Node2D" unique_id=1768827714]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=961537010]
 position = Vector2(1, 0)
 sprite_frames = SubResource("SpriteFrames_82oti")
 
-[node name="Enemy_killzone" parent="AnimatedSprite2D" instance=ExtResource("2_7k7bx")]
+[node name="Enemy_killzone" parent="AnimatedSprite2D" unique_id=184537617 instance=ExtResource("2_7k7bx")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Enemy_killzone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Enemy_killzone" unique_id=2050876988]
 position = Vector2(1.5, -1)
 shape = SubResource("RectangleShape2D_7k7bx")
